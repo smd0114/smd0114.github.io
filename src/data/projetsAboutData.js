@@ -1,8 +1,17 @@
 import urbanStyle from "../assets/img-projects/urbanStyle.png";
 import imgNote from "../assets/img-projects/note-app.png";
 import ReactEcommerce from "../assets/img-projects/ecommers.jpg";
+import VintageTone from "../assets/img-projects/vintageToneApp.jpg";
 
 export const proyectos = [
+    {
+    titulo: "Vintage Tone",
+    imagen: VintageTone.src,
+    tecnologias: ["Vue.js", "Tailwind", "Express", "MongoDB"],
+    demo: "https://vintage-tone-front-vue.vercel.app",
+    codigo: "https://github.com/Lautaro-R-collins/VintageTone-Front-Vue.git",
+    categoria: "fullstack",
+  },
   {
     titulo: "React Tiendita",
     imagen: ReactEcommerce.src,
@@ -17,13 +26,6 @@ export const proyectos = [
     tecnologias: ["React", "Tailwind", "Firebase"],
     demo: "https://proyecto-final-rodriguez-sable.vercel.app/",
     codigo: "https://github.com/Lautaro-R-collins/ProyectoFinal-Rodriguez.git",
-  },
-  {
-    titulo: "App organizacion",
-    imagen: imgNote.src,
-    tecnologias: ["React", "Tailwind", "Express", "MongoDB"],
-    demo: "https://front-react-todo.onrender.com",
-    codigo: "https://github.com/Lautaro-R-collins/Front-react-todo",
   },
   {
     titulo: "API REST para Ecommerce",
