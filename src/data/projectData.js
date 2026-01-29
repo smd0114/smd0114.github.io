@@ -7,6 +7,7 @@ import Verbenas from "../assets/img-projects/challenge-newyze.png";
 import ReactEcommerce from "../assets/img-projects/ecommers.jpg";
 import PortfolioDev from "../assets/img-projects/PortfolioDev.jpg";
 import VintageTone from "../assets/img-projects/vintageToneApp.jpg";
+import AstroEcommers from "../assets/img-projects/astroEcommers.jpg";
 
 export const proyectos = [
   {
@@ -28,6 +29,16 @@ export const proyectos = [
     demo: "https://react-e-commerce-three-phi.vercel.app",
     codigo: "https://github.com/Lautaro-R-collins/React-E-commerce.git",
     categoria: "fullstack",
+  },
+    {
+    titulo: "Astro Ecommerce",
+    descripcion:
+      "E-commerce frontend desarrollado con Astro y React. Incluye carrito de compras, categorías, y diseño responsivo.",
+    imagen: AstroEcommers.src,
+    tecnologias: ["React", "Astro", "Tailwind", "daisyUI"],
+    demo: "https://e-commer-astro.vercel.app",
+    codigo: "https://github.com/Lautaro-R-collins/E-commer-Astro.git",
+    categoria: "frontend",
   },
   {
     titulo: "App organizacion",
