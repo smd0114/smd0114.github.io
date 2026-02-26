@@ -10,7 +10,7 @@ import { proyectos } from "../data/projectData.js";
 <Layout title="Evidencias" description="Evidencias">
   <Hero titulo="Evidencias" />
 
-  <!-- Botones -->
+  <!-- Botones de filtro con categorías actualizadas -->
   <div class="mt-6 mb-6 flex flex-wrap justify-center gap-3 px-2">
     <button class="filter-btn cursor-pointer rounded-full bg-[#69c7c7] px-5 py-1.5 text-sm font-bold text-[#1d1250] drop-shadow-[2px_2px_0_#7836cf] transition-all duration-150 active:translate-y-0.5 active:drop-shadow-none" data-filter="all">
       Todos
@@ -24,7 +24,7 @@ import { proyectos } from "../data/projectData.js";
     <button class="filter-btn cursor-pointer rounded-full bg-[#69c7c7] px-5 py-1.5 text-sm font-bold text-[#1d1250] drop-shadow-[2px_2px_0_#7836cf] transition-all duration-150 active:translate-y-0.5 active:drop-shadow-none" data-filter="backend">
       SQL
     </button>
-    <button class="filter-btn cursor-pointer rounded-full bg-[#69c7c7] px-5 py-1.5 text-sm font-bold text-[#1d1250] drop-shadow-[2px_2px_0_#7836cf] transition-all duration-150 active:translate-y-0.5 active:drop-shadow-none" data-filter="backend">
+    <button class="filter-btn cursor-pointer rounded-full bg-[#69c7c7] px-5 py-1.5 text-sm font-bold text-[#1d1250] drop-shadow-[2px_2px_0_#7836cf] transition-all duration-150 active:translate-y-0.5 active:drop-shadow-none" data-filter="proyecto">
       Proyecto
     </button>
   </div>
@@ -34,10 +34,21 @@ import { proyectos } from "../data/projectData.js";
     id="projects-container"
     class="4xl:px-96 flex flex-wrap justify-center gap-5 px-3 pt-5 xl:px-32 2xl:px-60"
   >
-    
+    {
+      proyectos.map((proyecto, index) => (
+        <ProjectCard
+          index={index}
+          titulo={proyecto.titulo}
+          descripcion={proyecto.descripcion}
+          imagen={proyecto.imagen}
+          ver={proyecto.ver}
+          categoria={proyecto.categoria}
+        />
+      ))
+    }
   </div>
 
-  <!-- Ver el resto de los proyectos -->
+  <!-- Ver más proyectos -->
   <div class="flex justify-center mt-8">
     <button
       id="load-more"
