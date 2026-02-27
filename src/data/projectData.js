@@ -5,7 +5,7 @@ export const proyectos = [
         titulo: "Modelos E/R",
         descripcion: "Modelos Entidad-Relación en notación Chen",
         // imagen eliminada por ahora
-        ver: "https://tuenlace.com/modelos-er",
+        ver: "https://unbosqueeduco-my.sharepoint.com/:f:/g/personal/smendozad_unbosque_edu_co/IgDKg7vwZd74TbUzPnuwNWD4AVNZcVyECWVXy_esz7XeaoI?e=A7Cu9C",
         categoria: "fullstack", // Para el filtro "Modelado"
     },
     {
