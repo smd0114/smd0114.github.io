@@ -10,19 +10,19 @@ export const proyectos = [
     },
     {
         titulo: "Normalización BD",
-        descripcion: "Proceso de normalización de bases de datos hasta 3FN",
+        descripcion: "Proceso de normalización de bases de datos",
         ver: "https://tuenlace.com/normalizacion",
         categoria: "frontend", // Para el filtro "Normalización"
     },
     {
-        titulo: "Consultas SQL",
-        descripcion: "Consultas SQL complejas para análisis de datos",
+        titulo: "SQL",
+        descripcion: "Bases de datos en lenguaje SQL",
         ver: "https://tuenlace.com/sql",
         categoria: "backend", // Para el filtro "SQL"
     },
     {
         titulo: "Proyecto Final BD",
-        descripcion: "Proyecto integrador de base de datos",
+        descripcion: "Proyecto integrador de bases de datos",
         ver: "https://tuenlace.com/proyecto",
         categoria: "proyecto", // Para el filtro "Proyecto"
     },
