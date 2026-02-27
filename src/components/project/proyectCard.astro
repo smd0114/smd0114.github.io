@@ -1,72 +1,44 @@
 ---
-import { HiArrowRight } from "react-icons/hi";
-
-export interface Props {
-  titulo: string;
-  descripcion: string;
-  imagen: string;
-  tecnologias: string[];
-  demo: string;
-  codigo: string;
-  categoria?: string;
-  index: number; 
-}
-
-const { titulo, descripcion, imagen, tecnologias, demo, codigo, categoria, index } =
-  Astro.props;
+// proyectCard.astro
+const { titulo, descripcion, imagen, ver, categoria, index } = Astro.props;
 ---
 
-<div
+<div 
+  class="project-card bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-[#69c7c7]/30 hover:border-[#69c7c7] transition-all hover:scale-[1.02] w-[350px] max-w-full"
   data-index={index}
-  data-categoria={categoria ?? ""}
-  class="project-card z-10 flex w-[400px] flex-col overflow-hidden rounded-lg bg-gray-900 shadow-lg transition-transform hover:scale-[1.01] lg:w-[320px] drop-shadow-[4px_4px_0_#7836cf]"
+  data-categoria={categoria}
 >
-  <img
-    src={imagen}
-    alt={`Imagen del proyecto ${titulo}`}
-    class="h-50 w-full rounded-2xl object-cover p-3"
-  />
-  <div class="flex grow flex-col px-3 pb-3">
-    <h3 class="text-xl font-semibold text-white drop-shadow-[1px_1px_0_#7836cf]">{titulo}</h3>
-
-    <div class="my-1.5 flex flex-wrap gap-2">
-      {
-        tecnologias.map((tech) => (
-          <span class="rounded-md bg-[#7836cf]/20 text-[#a27ed1] px-2 py-0.5 text-xs font-semibold">
-            {tech}
-          </span>
-        ))
-      }
-    </div>
-
-    <p class="flex grow text-gray-400">{descripcion}</p>
-
-    <div class="mt-auto flex justify-between">
-      <a
-        class="group text-primary mt-6 flex items-center justify-start p-0 font-bold text-lg"
-        target="_blank"
-        rel="noopener noreferrer"
-        href={demo}
-      >
-        Demo
-        <HiArrowRight
-          className="ml-1 transition-transform duration-200 group-hover:translate-x-1"
-          size={18}
+  {
+    imagen && (
+      <div class="w-full h-48 overflow-hidden">
+        <img 
+          src={imagen} 
+          alt={titulo}
+          class="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+          loading="lazy"
         />
-      </a>
-
-      <a
-        class="group text-primary mt-6 flex items-center justify-start p-0 font-bold text-lg"
-        href={codigo}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Código
-        <HiArrowRight
-          className="ml-1 transition-transform duration-200 group-hover:translate-x-1"
-          size={18}
-        />
-      </a>
-    </div>
+      </div>
+    )
+  }
+  
+  <div class="p-6">
+    <h3 class="text-xl font-bold text-white mb-3">{titulo}</h3>
+    
+    <p class="text-gray-300 text-sm mb-4 line-clamp-3">
+      {descripcion}
+    </p>
+    
+    {
+      ver && (
+        <a 
+          href={ver}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block w-full text-center bg-[#69c7c7] text-[#1d1250] font-bold py-2 px-4 rounded-lg hover:bg-[#46caca] transition-colors drop-shadow-[2px_2px_0_#7836cf] hover:drop-shadow-[1px_1px_0_#7836cf]"
+        >
+          Ver evidencia
+        </a>
+      )
+    }
   </div>
 </div>
