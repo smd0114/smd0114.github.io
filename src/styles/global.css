@@ -1,41 +1,61 @@
 @import "tailwindcss";
 
+:root {
+  --color-primary: #7836cf;
+  --color-secondary: #512092;
+  --color-accent: #69c7c7;
+  --color-accent-bright: #0debd8;
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+}
+
 .primary {
-  color: #7836cf;
+  color: var(--color-primary);
 }
 .secondary {
-  color: #512092;
+  color: var(--color-secondary);
 }
 .bg-primary {
-  background-color: #7836cf;
+  background-color: var(--color-primary);
 }
 .bg-secondary {
-  background-color: #512092;
+  background-color: var(--color-secondary);
 }
 .text-primary {
-  color: #7836cf;
+  color: var(--color-primary);
 }
 
 /* reglas hover (usar estas clases directamente) */
 .hover-text-secondary:hover {
-  color: #7836cf;
+  color: var(--color-accent-bright);
 }
 .hover-bg-secondary:hover {
-  background-color: #7836cf;
+  background-color: var(--color-primary);
 }
 .hover\:bg-secondary:hover {
-  background-color: #512092;
+  background-color: var(--color-secondary);
 }
 .hover\:text-secondary:hover {
-  color: #512092;
+  color: var(--color-accent-bright);
 }
 
 .text-shadow {
-  text-shadow: 2px 2px 0 #620deb;
+  text-shadow: 0 2px 12px rgb(98 13 235 / 45%);
 }
 
 .text-shadow-cyan {
-  text-shadow: 2px 2px 0 #0debd8;
+  text-shadow: 0 2px 12px rgb(13 235 216 / 45%);
 }
 
 /* estilos del home */

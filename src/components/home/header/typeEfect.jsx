@@ -3,7 +3,10 @@ import Typewriter from "typewriter-effect";
 
 const TypewriterComponent = () => {
   return (
-    <div className="notranslate mt-5 text-3xl font-bold">
+    <div
+      className="notranslate mt-5 text-3xl font-bold"
+      style={{ fontFamily: "var(--font-display)" }}
+    >
       <Typewriter
         options={{
           strings: ["Desarrollo Web", "Frontend", "Backend", "Ciberseguridad"],
