@@ -1,0 +1,28 @@
+---
+export interface Props {
+  class?: string;
+}
+
+const { class: className = "h-9 w-9" } = Astro.props;
+---
+
+<svg
+  viewBox="0 0 100 100"
+  class={className}
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
+  aria-label="SMD"
+>
+  <g fill="none" stroke="#7836cf" stroke-width="6" transform="translate(3,3)">
+    <circle cx="50" cy="34" r="24" />
+    <circle cx="66" cy="50" r="24" />
+    <circle cx="50" cy="66" r="24" />
+    <circle cx="34" cy="50" r="24" />
+  </g>
+  <g fill="none" stroke="#69c7c7" stroke-width="6">
+    <circle cx="50" cy="34" r="24" />
+    <circle cx="66" cy="50" r="24" />
+    <circle cx="50" cy="66" r="24" />
+    <circle cx="34" cy="50" r="24" />
+  </g>
+</svg>

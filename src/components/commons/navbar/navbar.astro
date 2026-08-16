@@ -2,6 +2,7 @@
 import { FiMenu, FiX } from "react-icons/fi";
 import NotificationBell from "./notificationBell.jsx";
 import { FaGithub } from "react-icons/fa6";
+import Logo from "../logo/logo.astro";
 
 const links = [
   { name: "Inicio", href: "/" },
@@ -21,12 +22,8 @@ const links = [
   >
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <!-- Logo -->
-      <a href="/" class="flex items-center">
-        <h3
-          class="text-[#69c7c7] text-3xl font-bold drop-shadow-[1.5px_1.5px_0_#7836cf]"
-        >
-          SMD
-        </h3>
+      <a href="/" class="flex items-center" aria-label="Inicio">
+        <Logo class="h-9 w-9" />
       </a>
 
       <!-- Desktop Links -->
