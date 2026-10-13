@@ -23,6 +23,13 @@ export const proyectos = [
         categoria: "nosql",
     },
     {
+        titulo: "Laboratorios",
+        descripcion:
+            "Laboratorios prácticos del curso de Bases de Datos, aplicando los conceptos vistos en clase sobre casos guiados.",
+        ver: "https://unbosqueeduco-my.sharepoint.com/:f:/g/personal/smendozad_unbosque_edu_co/IgD54M2DTe9yR4dh2ba5fgdPAdq5GyuIDj3muXeZh0seQNk?e=JHtinJ",
+        categoria: "laboratorios",
+    },
+    {
         titulo: "Proyecto Final BD",
         descripcion:
             "Proyecto integrador que combina modelado, SQL y PL/SQL en el diseño y la implementación de un sistema de base de datos completo.",
